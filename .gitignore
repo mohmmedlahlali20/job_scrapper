@@ -1,0 +1,44 @@
+# Environments
+venv/
+env/
+.env
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# OS / System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.pyre/
+.mypy_cache/
+.pytest_cache/
+
+# Streamlit
+.streamlit/credentials.toml

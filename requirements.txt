@@ -1,0 +1,5 @@
+scrapling[fetchers]
+google-genai
+aiomysql
+python-dotenv
+aiohttp
