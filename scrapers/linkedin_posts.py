@@ -26,7 +26,7 @@ def _build_google_dork_url(keyword: str, start: int = 0) -> str:
 class LinkedInPostsScraper(BaseScraper):
     name = "linkedin_posts"
 
-    async def scrape(self, keyword: str) -> list[RawJob]:
+    async def scrape(self, keyword: str, on_job_found=None) -> list[RawJob]:
         """Scrape Google search results for LinkedIn #hiring posts."""
         jobs: list[RawJob] = []
         stealth = self.get_stealth_params()
@@ -76,6 +76,8 @@ class LinkedInPostsScraper(BaseScraper):
                             if job:
                                 jobs.append(job)
                                 page_jobs += 1
+                                if on_job_found:
+                                    await on_job_found(job)
                         except Exception as e:
                             logger.debug(f"  Result parse error: {e}")
 

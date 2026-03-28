@@ -13,7 +13,7 @@ from config import DB_CONFIG, JOB_MAX_AGE_DAYS
 logger = logging.getLogger("optimacv.db")
 
 CREATE_TABLE_SQL = """
-CREATE TABLE job_listings (
+CREATE TABLE IF NOT EXISTS job_listings (
     id              INT AUTO_INCREMENT PRIMARY KEY,
     title           VARCHAR(500)  NOT NULL,
     company         VARCHAR(300)  NOT NULL,
@@ -48,7 +48,6 @@ class JobDatabase:
         async with self.pool.acquire() as conn:
             async with conn.cursor() as cur:
                 # Ensure the new schema is used.
-                await cur.execute("DROP TABLE IF EXISTS job_listings;")
                 await cur.execute(CREATE_TABLE_SQL)
                 await conn.commit()
         logger.info("✅ Database logic initialized.")

@@ -5,8 +5,86 @@ from sqlalchemy import create_engine
 from datetime import datetime
 import os
 from config import DB_CONFIG
+import sys
+import subprocess
+import psutil
 
 st.set_page_config(page_title="OptimaCV Dashboard", layout="wide", page_icon="🎯")
+
+# ── Scheduler Controls ───────────────────────────────────────────────────────
+PID_FILE = "scraper.pid"
+
+def get_scraper_pid():
+    if os.path.exists(PID_FILE):
+        try:
+            with open(PID_FILE, "r") as f:
+                pid = int(f.read().strip())
+            if psutil.pid_exists(pid):
+                p = psutil.Process(pid)
+                cmd = " ".join(p.cmdline()).lower()
+                if "python" in cmd and "run.py" in cmd:
+                    return pid
+        except Exception:
+            pass
+    return None
+
+st.sidebar.header("⚙️ Scheduler Controls")
+
+running_pid = get_scraper_pid()
+
+if running_pid:
+    st.sidebar.success(f"🟢 Scheduler is RUNNING (PID: {running_pid})")
+    if st.sidebar.button("⏹️ Stop Scheduler"):
+        try:
+            p = psutil.Process(running_pid)
+            p.terminate()
+            if os.path.exists(PID_FILE):
+                os.remove(PID_FILE)
+            st.sidebar.warning("Scheduler stopped.")
+            st.rerun()
+        except Exception as e:
+            st.sidebar.error(f"Failed to stop: {e}")
+else:
+    st.sidebar.warning("🔴 Scheduler is STOPPED")
+    interval = st.sidebar.number_input("Interval (hours)", min_value=1, max_value=24, value=4)
+    if st.sidebar.button("▶️ Start Scheduler"):
+        # Launch run.py --continuous detached
+        flags = 0
+        if sys.platform == "win32":
+            flags = subprocess.CREATE_NEW_CONSOLE | subprocess.DETACHED_PROCESS
+            
+        p = subprocess.Popen(
+            [sys.executable, "run.py", "--continuous", "--interval", str(interval)],
+            creationflags=flags
+        )
+        with open(PID_FILE, "w") as f:
+            f.write(str(p.pid))
+        st.sidebar.success("Scheduler started!")
+        st.rerun()
+
+st.sidebar.divider()
+if st.sidebar.button("🚀 Run Scraper Once Now"):
+    with st.spinner("Scraping in progress... Check logs below."):
+        subprocess.run([sys.executable, "run.py"])
+    st.sidebar.success("Manual run complete!")
+    st.rerun()
+
+st.sidebar.divider()
+st.sidebar.subheader("📄 Scraper Logs")
+if st.sidebar.button("🔄 Refresh Logs"):
+    st.rerun()
+
+log_file = "logs/scraper.log"
+if os.path.exists(log_file):
+    try:
+        with open(log_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            recent_logs = "".join(lines[-50:])
+        st.sidebar.text_area("Live Logs (Last 50 lines)", recent_logs, height=300)
+    except Exception as e:
+        st.sidebar.error(f"Error reading logs: {e}")
+else:
+    st.sidebar.info("No logs generated yet. Run the scraper to create them.")
 
 @st.cache_resource
 def init_connection():

@@ -1,0 +1,395 @@
+2026-03-27 21:47:01 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:47:01 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:47:01 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:47:01.497426
+2026-03-27 21:47:01 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:47:01 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:48:11 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:48:11 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:48:11 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:48:11.757704
+2026-03-27 21:48:11 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:48:11 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:48:16 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:48:16 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:48:16 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:48:16.840377
+2026-03-27 21:48:16 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:48:16 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:49:02 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:49:02 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:49:02 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:49:02.416806
+2026-03-27 21:49:02 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:49:02 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:52:05 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:52:05 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:52:05 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:52:05.014859
+2026-03-27 21:52:05 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:52:05 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ 🚀 OptimaCV Engine — Starting pipeline run
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ 📅 Timestamp: 2026-03-27T21:53:28.132042
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ 🔑 Keywords: ['Python Developer', 'Fullstack Developer', 'Backend Engineer', 'Data Engineer', 'DevOps Engineer']
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ ======================================================================
+2026-03-27 21:53:28 │ optimacv.db                  │ INFO  │ ✅ Database logic initialized.
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ 
+──────────────────────────────────────────────────
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ 🔎 Processing keyword: 'Python Developer'
+2026-03-27 21:53:28 │ optimacv.engine              │ INFO  │ ──────────────────────────────────────────────────
+2026-03-27 21:53:28 │ optimacv.linkedin            │ INFO  │ 🔍 LinkedIn Jobs: 'Python Developer' (res: 1536x864)
+2026-03-27 21:53:28 │ optimacv.linkedin_posts      │ INFO  │ 🔍 LinkedIn Posts (Google Dork): '#hiring Python Developer' (res: 1280x720)
+2026-03-27 21:53:28 │ optimacv.indeed              │ INFO  │ 🔍 Indeed: 'Python Developer' (res: 1280x720)
+2026-03-27 21:53:30 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=0> (referer: https://www.google.com/)
+2026-03-27 21:53:30 │ optimacv.linkedin            │ INFO  │   Page 0: 10 jobs parsed.
+2026-03-27 21:53:32 │ scrapling                    │ INFO  │ Fetched (302) <GET https://www.google.com/search?q=site%3Alinkedin.com%2Fposts%2F+%23hiring+Python+Developer+Morocco&start=0> (referer: https://www.google.com/)
+2026-03-27 21:53:32 │ scrapling                    │ INFO  │ Fetched (429) <GET https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fposts%252F%2B%2523hiring%2BPython%2BDeveloper%2BMorocco%26start%3D0&q=EgSgsyb8GMrcm84GIjB8a4G7cmhwl8YGA90G3pi2lnimMWyS6r__B3NJyM8XcHzUa-jNcldSO5vtJzxEzG0yAnJSWgFD> (referer: https://www.google.com/)
+2026-03-27 21:53:32 │ optimacv.linkedin_posts      │ WARNING │ 🚫 Google CAPTCHA detected. Stopping.
+2026-03-27 21:53:34 │ scrapling                    │ INFO  │ Fetched (200) <GET https://ma.indeed.com/jobs?q=Python+Developer&l=Morocco&sort=date&start=0&vjk=0fe21629f0328212> (referer: https://www.google.com/)
+2026-03-27 21:53:34 │ optimacv.linkedin_posts      │ INFO  │ ✅ LinkedIn Posts: 0 raw jobs for '#hiring Python Developer'.
+2026-03-27 21:53:34 │ optimacv.indeed              │ WARNING │ 🚫 Cloudflare challenge on page 0. Stopping.
+2026-03-27 21:53:35 │ optimacv.indeed              │ INFO  │ ✅ Indeed: 0 raw jobs for 'Python Developer'.
+2026-03-27 21:53:35 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=25> (referer: https://www.google.com/)
+2026-03-27 21:53:35 │ optimacv.linkedin            │ INFO  │   Page 1: 10 jobs parsed.
+2026-03-27 21:54:08 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=50> (referer: https://www.google.com/)
+2026-03-27 21:54:08 │ optimacv.linkedin            │ INFO  │   Page 2: 9 jobs parsed.
+2026-03-27 21:54:14 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Python+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=75> (referer: https://www.google.com/)
+2026-03-27 21:54:14 │ optimacv.linkedin            │ INFO  │   Page 3: 10 jobs parsed.
+2026-03-27 21:54:14 │ optimacv.linkedin            │ INFO  │ 🔗 Resolving 39 apply URLs...
+2026-03-27 21:54:16 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Fullstack Developer (Web & Mobile) - Hitachi Rail Project
+2026-03-27 21:54:17 │ optimacv.db                  │ INFO  │ Successfully saved job: Concepteur Développeur Python (F/H)
+2026-03-27 21:54:18 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:54:20 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Python IA
+2026-03-27 21:54:21 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:54:22 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Python Senior
+2026-03-27 21:54:23 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:54:25 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Python/ Django  Senior
+2026-03-27 21:54:26 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:54:27 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack JAVA / PHP l Stage PFE
+2026-03-27 21:54:29 │ optimacv.db                  │ INFO  │ Successfully saved job: Backend & Data Pipeline Engineer
+2026-03-27 21:54:30 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Test Full-Stack ( manuel et Automatisation )  - Rabat/Casablanca
+2026-03-27 21:54:31 │ optimacv.db                  │ INFO  │ Successfully saved job: Full Stack Engineer
+2026-03-27 21:54:33 │ optimacv.db                  │ INFO  │ Successfully saved job: Fullstack Engineer
+2026-03-27 21:54:34 │ optimacv.db                  │ INFO  │ Successfully saved job: Full-Stack Application Developer (C# / React.js / SQL)
+2026-03-27 21:54:35 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Node/React - F/H
+2026-03-27 21:54:36 │ optimacv.db                  │ INFO  │ Successfully saved job: Fullstack Developer (Vue/.Net) - Fully Remote (Morocco)
+2026-03-27 21:54:37 │ optimacv.db                  │ INFO  │ Successfully saved job: Concepteur Développeur Python Ansible
+2026-03-27 21:54:39 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur C/Python sous Linux
+2026-03-27 21:54:40 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:54:41 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Frontend Developer (T-Shaped)
+2026-03-27 21:54:42 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Tech Lead
+2026-03-27 21:54:43 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Node JS/Vuj Js_ Hybride
+2026-03-27 21:54:45 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Sénior Java Back-End (H/F)
+2026-03-27 21:54:46 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur full stack Java Angular - dominante front
+2026-03-27 21:54:47 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Sénior – Java / Angular (Dominante Front-End)
+2026-03-27 21:54:48 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:54:50 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Expérimenté Java / React
+2026-03-27 21:54:51 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Sénior - Java / React (H-F) Rabat - Casablanca
+2026-03-27 21:54:52 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Senior Java/Angular
+2026-03-27 21:54:53 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur FullStack Node.js / Vue.js Senior| Devoteam Maroc Nearshore
+2026-03-27 21:54:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / Angular - expérimenté/Sénior
+2026-03-27 21:54:59 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Frontend Software Engineer - React.Js and Next.Js
+2026-03-27 21:55:01 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Concepteur Développeur PHP Symfony Senior ( Rabat/Casablanca )
+2026-03-27 21:55:02 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Sénior – Java / Angular (Dominante Back-End)
+2026-03-27 21:55:03 │ optimacv.db                  │ INFO  │ Successfully saved job: Mid-Senior Frontend Engineer - Design System & Component Library
+2026-03-27 21:55:04 │ optimacv.db                  │ INFO  │ Successfully saved job: Quantitative Consultant
+2026-03-27 21:55:06 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Java Angular Fullstack Developer (French speaker)- Relocation to Portugal
+2026-03-27 21:55:07 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Expérimenté Java / React
+2026-03-27 21:55:07 │ optimacv.linkedin            │ INFO  │ ✅ LinkedIn Jobs: 39 raw jobs for 'Python Developer'.
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │   LinkedIn Jobs: 39 raw jobs processed.
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │   LinkedIn Posts: 0 raw jobs processed.
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │   Indeed: 0 raw jobs processed.
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │ 
+──────────────────────────────────────────────────
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │ 🔎 Processing keyword: 'Fullstack Developer'
+2026-03-27 21:55:07 │ optimacv.engine              │ INFO  │ ──────────────────────────────────────────────────
+2026-03-27 21:55:07 │ optimacv.linkedin            │ INFO  │ 🔍 LinkedIn Jobs: 'Fullstack Developer' (res: 1600x900)
+2026-03-27 21:55:07 │ optimacv.linkedin_posts      │ INFO  │ 🔍 LinkedIn Posts (Google Dork): '#hiring Fullstack Developer' (res: 1280x720)
+2026-03-27 21:55:07 │ optimacv.indeed              │ INFO  │ 🔍 Indeed: 'Fullstack Developer' (res: 1536x864)
+2026-03-27 21:55:10 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Fullstack+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=0> (referer: https://www.google.com/)
+2026-03-27 21:55:10 │ optimacv.linkedin            │ INFO  │   Page 0: 10 jobs parsed.
+2026-03-27 21:55:13 │ scrapling                    │ INFO  │ Fetched (302) <GET https://www.google.com/search?q=site%3Alinkedin.com%2Fposts%2F+%23hiring+Fullstack+Developer+Morocco&start=0> (referer: https://www.google.com/)
+2026-03-27 21:55:13 │ scrapling                    │ INFO  │ Fetched (429) <GET https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fposts%252F%2B%2523hiring%2BFullstack%2BDeveloper%2BMorocco%26start%3D0&q=EgSgsyb8GKzdm84GIjAJJur3k0ERZGL-BNZ8GOIHxxubvW2jx6RxaEgTSivXOYUVYeSK7eEbUZV6ATQYBcQyAnJSWgFD> (referer: https://www.google.com/)
+2026-03-27 21:55:13 │ optimacv.linkedin_posts      │ WARNING │ 🚫 Google CAPTCHA detected. Stopping.
+2026-03-27 21:55:13 │ scrapling                    │ INFO  │ Fetched (200) <GET https://ma.indeed.com/jobs?q=Fullstack+Developer&l=Morocco&sort=date&start=0&vjk=9c9601d619a733ca> (referer: https://www.google.com/)
+2026-03-27 21:55:13 │ optimacv.indeed              │ INFO  │   Page 0: 8 jobs parsed.
+2026-03-27 21:55:14 │ optimacv.linkedin_posts      │ INFO  │ ✅ LinkedIn Posts: 0 raw jobs for '#hiring Fullstack Developer'.
+2026-03-27 21:55:15 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Fullstack+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=25> (referer: https://www.google.com/)
+2026-03-27 21:55:15 │ optimacv.linkedin            │ INFO  │   Page 1: 10 jobs parsed.
+2026-03-27 21:55:19 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Fullstack+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=50> (referer: https://www.google.com/)
+2026-03-27 21:55:19 │ optimacv.linkedin            │ INFO  │   Page 2: 9 jobs parsed.
+2026-03-27 21:55:23 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Fullstack+Developer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=75> (referer: https://www.google.com/)
+2026-03-27 21:55:23 │ optimacv.linkedin            │ INFO  │   Page 3: 4 jobs parsed.
+2026-03-27 21:55:23 │ optimacv.linkedin            │ INFO  │ 🔗 Resolving 33 apply URLs...
+2026-03-27 21:55:24 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:55:25 │ optimacv.db                  │ INFO  │ Successfully saved job: ReactJS Developer - Remote, Morocco
+2026-03-27 21:55:27 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack JAVA / PHP l Stage PFE
+2026-03-27 21:55:28 │ optimacv.db                  │ INFO  │ Successfully saved job: Front-End Developer React JS (H/F)
+2026-03-27 21:55:29 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Fullstack Developer (Web & Mobile) - Hitachi Rail Project
+2026-03-27 21:55:30 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:55:32 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack JAVA / PHP l Stage PFE
+2026-03-27 21:55:33 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:55:34 │ optimacv.db                  │ INFO  │ Successfully saved job: Full Stack Engineer
+2026-03-27 21:55:35 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:55:37 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:55:38 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java (Hybride)
+2026-03-27 21:55:39 │ optimacv.db                  │ INFO  │ Successfully saved job: Full-Stack Application Developer (C# / React.js / SQL)
+2026-03-27 21:55:40 │ optimacv.db                  │ INFO  │ Successfully saved job: Java Fullstack Developer (French Speaker) - Relocation to Portugal
+2026-03-27 21:55:42 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Full Stack/Ingénieure Full Stack
+2026-03-27 21:55:43 │ optimacv.db                  │ INFO  │ Successfully saved job: Full stack Engineer Annotator
+2026-03-27 21:55:44 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Sénior - Java / React (H-F) Rabat - Casablanca
+2026-03-27 21:55:46 │ optimacv.db                  │ INFO  │ Successfully saved job: Full stack Engineer Annotator
+2026-03-27 21:55:47 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Java FullStack H/F
+2026-03-27 21:55:48 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Node JS/Vuj Js_ Hybride
+2026-03-27 21:55:49 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Senior
+2026-03-27 21:55:50 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Senior
+2026-03-27 21:55:51 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur devops front end (F/H)
+2026-03-27 21:55:52 │ scrapling                    │ INFO  │ Fetched (307) <GET https://ma.indeed.com/jobs?q=Fullstack+Developer&l=Morocco&sort=date&start=10> (referer: https://www.google.com/)
+2026-03-27 21:55:52 │ scrapling                    │ INFO  │ Fetched (200) <GET https://secure.indeed.com/auth?co=MA&hl=en_MA&continue=http%3A%2F%2Fma.indeed.com%2Fjobs%3Fq%3DFullstack%2520Developer%26l%3DMorocco%26sort%3Ddate%26start%3D10&branding=page-two-signin&jsContinue=https%3A%2F%2Fonboarding.indeed.com%2Fonboarding%3Fco%3DMA%26hl%3Den_MA%26from%3Dpage-two-signin%26continue%3Dhttp%253A%252F%252Fma.indeed.com%252Fjobs%253Fq%253DFullstack%252520Developer%2526l%253DMorocco%2526sort%253Ddate%2526start%253D10&from=page-two-signin> (referer: https://www.google.com/)
+2026-03-27 21:55:52 │ optimacv.indeed              │ WARNING │ 🚫 Cloudflare challenge on page 1. Stopping.
+2026-03-27 21:55:53 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Sénior – Java / Angular (Dominante Front-End)
+2026-03-27 21:55:53 │ optimacv.indeed              │ INFO  │ 🔗 Resolving 8 Indeed apply URLs...
+2026-03-27 21:55:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Nous recherchons un consultant it
+2026-03-27 21:55:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Back-end Spring Boot / Kafka / MongoDB
+2026-03-27 21:55:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Full-Stack Developer (.NET & React)
+2026-03-27 21:55:55 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Fullstack Java Angular Developer | Devoteam Maroc Nearshore
+2026-03-27 21:55:55 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Backend Developer (Node.js / Python)
+2026-03-27 21:55:56 │ optimacv.db                  │ INFO  │ Successfully saved job: Fullstack developer (Connaissance React)
+2026-03-27 21:55:56 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior ServiceNow Developer (H/F) (Rabat)
+2026-03-27 21:55:57 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Senior Full Stack (Java/React) H/F
+2026-03-27 21:55:57 │ optimacv.db                  │ INFO  │ Successfully saved job: Consultant it
+2026-03-27 21:55:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Test Full-Stack ( manuel et Automatisation )  - Rabat/Casablanca
+2026-03-27 21:55:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Consultant it
+2026-03-27 21:55:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Offre: Senior Javascript / ReactJS Developer International Team
+2026-03-27 21:55:58 │ optimacv.indeed              │ INFO  │ ✅ Indeed: 8 raw jobs for 'Fullstack Developer'.
+2026-03-27 21:55:59 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Sénior Java Back-End (H/F)
+2026-03-27 21:56:00 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur full stack Java Angular - dominante front
+2026-03-27 21:56:01 │ optimacv.db                  │ INFO  │ Successfully saved job: Backend & Data Pipeline Engineer
+2026-03-27 21:56:02 │ optimacv.db                  │ INFO  │ Successfully saved job: Back-end Developer Ruby On Rails H/F
+2026-03-27 21:56:04 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Tech Lead
+2026-03-27 21:56:04 │ optimacv.linkedin            │ INFO  │ ✅ LinkedIn Jobs: 33 raw jobs for 'Fullstack Developer'.
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │   LinkedIn Jobs: 33 raw jobs processed.
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │   LinkedIn Posts: 0 raw jobs processed.
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │   Indeed: 8 raw jobs processed.
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │ 
+──────────────────────────────────────────────────
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │ 🔎 Processing keyword: 'Backend Engineer'
+2026-03-27 21:56:04 │ optimacv.engine              │ INFO  │ ──────────────────────────────────────────────────
+2026-03-27 21:56:04 │ optimacv.linkedin            │ INFO  │ 🔍 LinkedIn Jobs: 'Backend Engineer' (res: 1440x900)
+2026-03-27 21:56:04 │ optimacv.linkedin_posts      │ INFO  │ 🔍 LinkedIn Posts (Google Dork): '#hiring Backend Engineer' (res: 1280x720)
+2026-03-27 21:56:04 │ optimacv.indeed              │ INFO  │ 🔍 Indeed: 'Backend Engineer' (res: 1366x768)
+2026-03-27 21:56:06 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Backend+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=0> (referer: https://www.google.com/)
+2026-03-27 21:56:06 │ optimacv.linkedin            │ INFO  │   Page 0: 10 jobs parsed.
+2026-03-27 21:56:07 │ scrapling                    │ INFO  │ Fetched (302) <GET https://www.google.com/search?q=site%3Alinkedin.com%2Fposts%2F+%23hiring+Backend+Engineer+Morocco&start=0> (referer: https://www.google.com/)
+2026-03-27 21:56:07 │ scrapling                    │ INFO  │ Fetched (429) <GET https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fposts%252F%2B%2523hiring%2BBackend%2BEngineer%2BMorocco%26start%3D0&q=EgSgsyb8GOXdm84GIjBMIFVyoycTbO6TxxUNQrcPTlAO2ePtZ_ZN4BsUxKYB2Vu8I0KYftv8QHTVX39Zjx4yAnJSWgFD> (referer: https://www.google.com/)
+2026-03-27 21:56:07 │ optimacv.linkedin_posts      │ WARNING │ 🚫 Google CAPTCHA detected. Stopping.
+2026-03-27 21:56:09 │ optimacv.linkedin_posts      │ INFO  │ ✅ LinkedIn Posts: 0 raw jobs for '#hiring Backend Engineer'.
+2026-03-27 21:56:10 │ scrapling                    │ INFO  │ Fetched (200) <GET https://ma.indeed.com/jobs?q=Backend+Engineer&l=Morocco&sort=date&start=0&vjk=d5730989246f9e90> (referer: https://www.google.com/)
+2026-03-27 21:56:10 │ optimacv.indeed              │ WARNING │ 🚫 Cloudflare challenge on page 0. Stopping.
+2026-03-27 21:56:11 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Backend+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=25> (referer: https://www.google.com/)
+2026-03-27 21:56:11 │ optimacv.linkedin            │ INFO  │   Page 1: 10 jobs parsed.
+2026-03-27 21:56:12 │ optimacv.indeed              │ INFO  │ ✅ Indeed: 0 raw jobs for 'Backend Engineer'.
+2026-03-27 21:56:16 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Backend+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=50> (referer: https://www.google.com/)
+2026-03-27 21:56:16 │ optimacv.linkedin            │ INFO  │   Page 2: 10 jobs parsed.
+2026-03-27 21:56:20 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Backend+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=75> (referer: https://www.google.com/)
+2026-03-27 21:56:20 │ optimacv.linkedin            │ INFO  │   Page 3: 9 jobs parsed.
+2026-03-27 21:56:20 │ optimacv.linkedin            │ INFO  │ 🔗 Resolving 39 apply URLs...
+2026-03-27 21:56:22 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:56:23 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Fullstack Developer (Web & Mobile) - Hitachi Rail Project
+2026-03-27 21:56:24 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack JAVA / PHP l Stage PFE
+2026-03-27 21:56:25 │ optimacv.db                  │ INFO  │ Successfully saved job: Node.JS Developer
+2026-03-27 21:56:27 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Junior
+2026-03-27 21:56:28 │ optimacv.db                  │ INFO  │ Successfully saved job: ReactJS Developer - Remote, Morocco
+2026-03-27 21:56:29 │ optimacv.db                  │ INFO  │ Successfully saved job: Full Stack Engineer
+2026-03-27 21:56:30 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:56:32 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / React (dominante Back) Expérimenté
+2026-03-27 21:56:33 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack JAVA / PHP l Stage PFE
+2026-03-27 21:56:34 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Backend Developer (Node.js / Python)
+2026-03-27 21:56:35 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Back-end Spring Boot / Kafka / MongoDB
+2026-03-27 21:56:37 │ optimacv.db                  │ INFO  │ Successfully saved job: Fullstack Developer (Vue/.Net) - Fully Remote (Morocco)
+2026-03-27 21:56:38 │ optimacv.db                  │ INFO  │ Successfully saved job: Backend & Data Pipeline Engineer
+2026-03-27 21:56:39 │ optimacv.db                  │ INFO  │ Successfully saved job: Backend Developer .NET / Cloud
+2026-03-27 21:56:41 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java (Hybride)
+2026-03-27 21:56:42 │ optimacv.db                  │ INFO  │ Successfully saved job: Full Stack Engineer
+2026-03-27 21:56:43 │ optimacv.db                  │ INFO  │ Successfully saved job: Fullstack Engineer
+2026-03-27 21:56:44 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Java FullStack H/F
+2026-03-27 21:56:46 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Full Stack/Ingénieure Full Stack
+2026-03-27 21:56:47 │ optimacv.db                  │ INFO  │ Successfully saved job: Concepteur Développeur Full-Stack (Java/DevOps)
+2026-03-27 21:56:48 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Senior
+2026-03-27 21:56:49 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Senior
+2026-03-27 21:56:50 │ optimacv.db                  │ INFO  │ Successfully saved job: Javascript Fullstack Engineer - Senior
+2026-03-27 21:56:51 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Javascript Developer F/H
+2026-03-27 21:56:52 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur FullStack Java Angular | Devoteam Maroc Nearshore
+2026-03-27 21:56:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Backend Developer .NET / Cloud
+2026-03-27 21:56:55 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / ReactJS expérimenté ou senior
+2026-03-27 21:56:56 │ optimacv.db                  │ INFO  │ Successfully saved job: Stagiaire PFE - Informatique WEB DEV - Eleve Ingenieur  ( ref 10612 )
+2026-03-27 21:56:57 │ optimacv.db                  │ INFO  │ Successfully saved job: Back-end Developer Ruby On Rails H/F
+2026-03-27 21:56:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:57:00 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Senior Java/Angular
+2026-03-27 21:57:01 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Java / Angular -
+2026-03-27 21:57:02 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Frontend Developer (Angular)
+2026-03-27 21:57:03 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur full stack Java Angular - dominante front
+2026-03-27 21:57:04 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / Angular - expérimenté/Sénior
+2026-03-27 21:57:06 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Fullstack Java / ReactJS expérimenté ou senior
+2026-03-27 21:57:07 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Java Angular Fullstack Developer (French speaker)- Relocation to Portugal
+2026-03-27 21:57:08 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Java (Hispanophone)
+2026-03-27 21:57:08 │ optimacv.linkedin            │ INFO  │ ✅ LinkedIn Jobs: 39 raw jobs for 'Backend Engineer'.
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │   LinkedIn Jobs: 39 raw jobs processed.
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │   LinkedIn Posts: 0 raw jobs processed.
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │   Indeed: 0 raw jobs processed.
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │ 
+──────────────────────────────────────────────────
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │ 🔎 Processing keyword: 'Data Engineer'
+2026-03-27 21:57:08 │ optimacv.engine              │ INFO  │ ──────────────────────────────────────────────────
+2026-03-27 21:57:08 │ optimacv.linkedin            │ INFO  │ 🔍 LinkedIn Jobs: 'Data Engineer' (res: 2560x1440)
+2026-03-27 21:57:08 │ optimacv.linkedin_posts      │ INFO  │ 🔍 LinkedIn Posts (Google Dork): '#hiring Data Engineer' (res: 1280x720)
+2026-03-27 21:57:08 │ optimacv.indeed              │ INFO  │ 🔍 Indeed: 'Data Engineer' (res: 1600x900)
+2026-03-27 21:57:10 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=0> (referer: https://www.google.com/)
+2026-03-27 21:57:10 │ optimacv.linkedin            │ INFO  │   Page 0: 10 jobs parsed.
+2026-03-27 21:57:11 │ scrapling                    │ INFO  │ Fetched (302) <GET https://www.google.com/search?q=site%3Alinkedin.com%2Fposts%2F+%23hiring+Data+Engineer+Morocco&start=0> (referer: https://www.google.com/)
+2026-03-27 21:57:11 │ scrapling                    │ INFO  │ Fetched (429) <GET https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fposts%252F%2B%2523hiring%2BData%2BEngineer%2BMorocco%26start%3D0&q=EgSgsyb8GKXem84GIjAo6HBNtcMCrUMO5-dXbenpj1jpv19XLXJtjz5ygKf0-DbzBQ-DAmIQQxUbzhdESIsyAnJSWgFD> (referer: https://www.google.com/)
+2026-03-27 21:57:11 │ optimacv.linkedin_posts      │ WARNING │ 🚫 Google CAPTCHA detected. Stopping.
+2026-03-27 21:57:13 │ optimacv.linkedin_posts      │ INFO  │ ✅ LinkedIn Posts: 0 raw jobs for '#hiring Data Engineer'.
+2026-03-27 21:57:13 │ scrapling                    │ INFO  │ Fetched (200) <GET https://ma.indeed.com/jobs?q=Data+Engineer&l=Morocco&sort=date&start=0&vjk=b21ad8036c4dbce5> (referer: https://www.google.com/)
+2026-03-27 21:57:13 │ optimacv.indeed              │ WARNING │ 🚫 Cloudflare challenge on page 0. Stopping.
+2026-03-27 21:57:14 │ optimacv.indeed              │ INFO  │ ✅ Indeed: 0 raw jobs for 'Data Engineer'.
+2026-03-27 21:57:17 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=25> (referer: https://www.google.com/)
+2026-03-27 21:57:17 │ optimacv.linkedin            │ INFO  │   Page 1: 10 jobs parsed.
+2026-03-27 21:57:23 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=50> (referer: https://www.google.com/)
+2026-03-27 21:57:23 │ optimacv.linkedin            │ INFO  │   Page 2: 10 jobs parsed.
+2026-03-27 21:57:28 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=Data+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=75> (referer: https://www.google.com/)
+2026-03-27 21:57:28 │ optimacv.linkedin            │ INFO  │   Page 3: 10 jobs parsed.
+2026-03-27 21:57:28 │ optimacv.linkedin            │ INFO  │ 🔗 Resolving 40 apply URLs...
+2026-03-27 21:57:30 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer Python / DevOps
+2026-03-27 21:57:31 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer (H/F)
+2026-03-27 21:57:32 │ optimacv.db                  │ INFO  │ Successfully saved job: Junior Data Engineer - Casablanca
+2026-03-27 21:57:33 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Data Engineer – Data Platform & Analytics
+2026-03-27 21:57:35 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer (H/F)
+2026-03-27 21:57:37 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Analyst
+2026-03-27 21:57:38 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer – PowerCenter (Relocation to Portugal)
+2026-03-27 21:57:40 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Analyst (H/F)
+2026-03-27 21:57:41 │ optimacv.db                  │ INFO  │ Successfully saved job: Big Data Engineer
+2026-03-27 21:57:42 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer (F/H)
+2026-03-27 21:57:44 │ optimacv.db                  │ INFO  │ Successfully saved job: Consultant(e) Junior Data & BI
+2026-03-27 21:57:45 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Analyst
+2026-03-27 21:57:46 │ optimacv.db                  │ INFO  │ Successfully saved job: ME Engineer
+2026-03-27 21:57:47 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer – Expert Migration & Automation
+2026-03-27 21:57:48 │ optimacv.db                  │ INFO  │ Successfully saved job: DATA ENGINEER – IA / MLOPs
+2026-03-27 21:57:49 │ optimacv.db                  │ INFO  │ Successfully saved job: Lead Data Engineer
+2026-03-27 21:57:50 │ optimacv.db                  │ INFO  │ Successfully saved job: Manager Data Engineer - Casablanca
+2026-03-27 21:57:52 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer - X Delivery
+2026-03-27 21:57:53 │ optimacv.db                  │ INFO  │ Successfully saved job: SW Developer & Data Analyst
+2026-03-27 21:57:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Architecte Data – Databricks
+2026-03-27 21:57:55 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer Annotator
+2026-03-27 21:57:56 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer Sénior (DBT / SQL)
+2026-03-27 21:57:58 │ optimacv.db                  │ INFO  │ Successfully saved job: AD Software Engineer - Junior H/F
+2026-03-27 21:57:59 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer Java Spark
+2026-03-27 21:58:00 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior AI Data Engineer (Microsoft Fabric & Azure)
+2026-03-27 21:58:01 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Data Tableau (F/H)
+2026-03-27 21:58:02 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer 1
+2026-03-27 21:58:03 │ optimacv.db                  │ INFO  │ Successfully saved job: Google Cloud Security Engineer.
+2026-03-27 21:58:04 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Analyst Intern - X Delivery
+2026-03-27 21:58:05 │ optimacv.db                  │ INFO  │ Successfully saved job: Machine Learning Engineer
+2026-03-27 21:58:06 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Data Engineer - X Delivery
+2026-03-27 21:58:08 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Java Software Engineer
+2026-03-27 21:58:09 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer (MAUI / Mobile)
+2026-03-27 21:58:10 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer JAVA KAFKA
+2026-03-27 21:58:11 │ optimacv.db                  │ INFO  │ Successfully saved job: Head of Data Analysis
+2026-03-27 21:58:12 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer Sénior (DBT / SQL)
+2026-03-27 21:58:13 │ optimacv.db                  │ INFO  │ Successfully saved job: Cloud Data Engineer SQL GCP (H/F) (Devoteam Nearshore) (Cooptation)
+2026-03-27 21:58:14 │ optimacv.db                  │ INFO  │ Successfully saved job: Stagiaire PFE – Data Analyst / Reporting IT (ServiceNow & Support)
+2026-03-27 21:58:15 │ optimacv.db                  │ INFO  │ Successfully saved job: Stagiaire PFE – Data Analyst / Reporting IT (ServiceNow & Support)
+2026-03-27 21:58:17 │ optimacv.db                  │ INFO  │ Successfully saved job: Software engineer
+2026-03-27 21:58:17 │ optimacv.linkedin            │ INFO  │ ✅ LinkedIn Jobs: 40 raw jobs for 'Data Engineer'.
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │   LinkedIn Jobs: 40 raw jobs processed.
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │   LinkedIn Posts: 0 raw jobs processed.
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │   Indeed: 0 raw jobs processed.
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │ 
+──────────────────────────────────────────────────
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │ 🔎 Processing keyword: 'DevOps Engineer'
+2026-03-27 21:58:17 │ optimacv.engine              │ INFO  │ ──────────────────────────────────────────────────
+2026-03-27 21:58:17 │ optimacv.linkedin            │ INFO  │ 🔍 LinkedIn Jobs: 'DevOps Engineer' (res: 1280x720)
+2026-03-27 21:58:17 │ optimacv.linkedin_posts      │ INFO  │ 🔍 LinkedIn Posts (Google Dork): '#hiring DevOps Engineer' (res: 1536x864)
+2026-03-27 21:58:17 │ optimacv.indeed              │ INFO  │ 🔍 Indeed: 'DevOps Engineer' (res: 1920x1080)
+2026-03-27 21:58:19 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=DevOps+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=0> (referer: https://www.google.com/)
+2026-03-27 21:58:19 │ optimacv.linkedin            │ INFO  │   Page 0: 10 jobs parsed.
+2026-03-27 21:58:20 │ scrapling                    │ INFO  │ Fetched (302) <GET https://www.google.com/search?q=site%3Alinkedin.com%2Fposts%2F+%23hiring+DevOps+Engineer+Morocco&start=0> (referer: https://www.google.com/)
+2026-03-27 21:58:20 │ scrapling                    │ INFO  │ Fetched (429) <GET https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fposts%252F%2B%2523hiring%2BDevOps%2BEngineer%2BMorocco%26start%3D0&q=EgSgsyb8GOrem84GIjAnsCAybAmO2zU9vsuRLQIyDPGFOUfvi6efJ67cXorxlnddOS7xxZRfKtzQ-roMouwyAnJSWgFD> (referer: https://www.google.com/)
+2026-03-27 21:58:20 │ optimacv.linkedin_posts      │ WARNING │ 🚫 Google CAPTCHA detected. Stopping.
+2026-03-27 21:58:22 │ optimacv.linkedin_posts      │ INFO  │ ✅ LinkedIn Posts: 0 raw jobs for '#hiring DevOps Engineer'.
+2026-03-27 21:58:26 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=DevOps+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=25> (referer: https://www.google.com/)
+2026-03-27 21:58:26 │ optimacv.linkedin            │ INFO  │   Page 1: 10 jobs parsed.
+2026-03-27 21:58:27 │ scrapling                    │ INFO  │ Fetched (200) <GET https://ma.indeed.com/jobs?q=DevOps+Engineer&l=Morocco&sort=date&start=0&vjk=b4c44738118907ae> (referer: https://www.google.com/)
+2026-03-27 21:58:27 │ optimacv.indeed              │ INFO  │   Page 0: 16 jobs parsed.
+2026-03-27 21:58:35 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=DevOps+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=50> (referer: https://www.google.com/)
+2026-03-27 21:58:35 │ optimacv.linkedin            │ INFO  │   Page 2: 10 jobs parsed.
+2026-03-27 21:58:38 │ scrapling                    │ INFO  │ Fetched (200) <GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=DevOps+Engineer&location=Morocco&f_TPR=r2592000&sortBy=DD&start=75> (referer: https://www.google.com/)
+2026-03-27 21:58:38 │ optimacv.linkedin            │ INFO  │   Page 3: 0 <li> found.
+2026-03-27 21:58:39 │ optimacv.linkedin            │ INFO  │ 🔗 Resolving 30 apply URLs...
+2026-03-27 21:58:40 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer Python / DevOps
+2026-03-27 21:58:41 │ optimacv.db                  │ INFO  │ Successfully saved job: DevOps engineer
+2026-03-27 21:58:42 │ optimacv.db                  │ INFO  │ Successfully saved job: Devops Engineer Annotator
+2026-03-27 21:58:43 │ optimacv.db                  │ INFO  │ Successfully saved job: Devops Engineer Annotator
+2026-03-27 21:58:45 │ optimacv.db                  │ INFO  │ Successfully saved job: Google Cloud Engineer
+2026-03-27 21:58:46 │ optimacv.db                  │ INFO  │ Successfully saved job: Security Engineer - SecOps & Cloud
+2026-03-27 21:58:47 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur DevOps/Ingénieure DevOps
+2026-03-27 21:58:48 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur DevOps/Ingénieure DevOps
+2026-03-27 21:58:49 │ optimacv.db                  │ INFO  │ Successfully saved job: DevOps Engineer
+2026-03-27 21:58:51 │ optimacv.db                  │ INFO  │ Successfully saved job: DevOps Engineer
+2026-03-27 21:58:52 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur devops back end python (F/H)
+2026-03-27 21:58:53 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur DevOps Kubernetes Senior| Devoteam Maroc Nearshore
+2026-03-27 21:58:54 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur devops front end (F/H)
+2026-03-27 21:58:55 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior DevOps Engineer_ Azure/GCP
+2026-03-27 21:58:57 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer (Cloud GCP) F/H
+2026-03-27 21:58:58 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Cloud Ops/ DevOps
+2026-03-27 21:58:59 │ optimacv.db                  │ INFO  │ Successfully saved job: Expert DevOps SRE Engineer | Devoteam Maroc Nearshore
+2026-03-27 21:59:00 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Cloud Ops/ DevOps
+2026-03-27 21:59:02 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior Azure DevOps/Cloud Engineer
+2026-03-27 21:59:03 │ optimacv.db                  │ INFO  │ Successfully saved job: Oracle APEX / DevOps Engineer
+2026-03-27 21:59:04 │ optimacv.db                  │ INFO  │ Successfully saved job: Expert Ingénieur Sécurité Cloud / SecOps (H/F) (Freelance)
+2026-03-27 21:59:05 │ scrapling                    │ INFO  │ Fetched (307) <GET https://ma.indeed.com/jobs?q=DevOps+Engineer&l=Morocco&sort=date&start=10> (referer: https://www.google.com/)
+2026-03-27 21:59:05 │ scrapling                    │ INFO  │ Fetched (200) <GET https://secure.indeed.com/auth?co=MA&hl=en_MA&continue=http%3A%2F%2Fma.indeed.com%2Fjobs%3Fq%3DDevOps%2520Engineer%26l%3DMorocco%26sort%3Ddate%26start%3D10&branding=page-two-signin&jsContinue=https%3A%2F%2Fonboarding.indeed.com%2Fonboarding%3Fco%3DMA%26hl%3Den_MA%26from%3Dpage-two-signin%26continue%3Dhttp%253A%252F%252Fma.indeed.com%252Fjobs%253Fq%253DDevOps%252520Engineer%2526l%253DMorocco%2526sort%253Ddate%2526start%253D10&from=page-two-signin> (referer: https://www.google.com/)
+2026-03-27 21:59:05 │ optimacv.indeed              │ WARNING │ 🚫 Cloudflare challenge on page 1. Stopping.
+2026-03-27 21:59:05 │ optimacv.db                  │ INFO  │ Successfully saved job: GCP DevOps Specialist
+2026-03-27 21:59:06 │ optimacv.indeed              │ INFO  │ 🔗 Resolving 16 Indeed apply URLs...
+2026-03-27 21:59:06 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior GCP 1
+2026-03-27 21:59:06 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Data GCP (Google Cloud Platform) (F/H)
+2026-03-27 21:59:07 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer
+2026-03-27 21:59:07 │ optimacv.db                  │ INFO  │ Successfully saved job: Architecte / Ingénieur Senior Sécurité – Application & Cloud Security
+2026-03-27 21:59:08 │ optimacv.db                  │ INFO  │ Successfully saved job: PMO Innovation F-H
+2026-03-27 21:59:08 │ optimacv.db                  │ INFO  │ Successfully saved job: Site Reliability Engineer (SRE) F/H
+2026-03-27 21:59:08 │ optimacv.db                  │ INFO  │ Successfully saved job: Cloud Data Engineer SQL GCP
+2026-03-27 21:59:09 │ optimacv.db                  │ INFO  │ Successfully saved job: IS-IT Architect F-H
+2026-03-27 21:59:09 │ optimacv.db                  │ INFO  │ Successfully saved job: Experienced Cloud Engineer (AWS) - Morocco
+2026-03-27 21:59:10 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur Presales Sénior — Data, AI, Cloud & EDB · EnterpriseDB
+2026-03-27 21:59:10 │ optimacv.db                  │ INFO  │ Successfully saved job: Architecte Expérimenté Cloud F/H
+2026-03-27 21:59:11 │ optimacv.db                  │ INFO  │ Successfully saved job: Administrateur IT DevOps
+2026-03-27 21:59:11 │ optimacv.db                  │ INFO  │ Successfully saved job: DATA ENGINEER SENIOR - IA / MLOPs
+2026-03-27 21:59:12 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior DevOps Engineer (Kubernetes / Cloud Infrastructure)
+2026-03-27 21:59:12 │ optimacv.db                  │ INFO  │ Successfully saved job: DevOps Expérimenté GCP
+2026-03-27 21:59:12 │ optimacv.db                  │ INFO  │ Successfully saved job: ServiceNow Expert Quality Assurance
+2026-03-27 21:59:13 │ optimacv.db                  │ INFO  │ Successfully saved job: Data Engineer
+2026-03-27 21:59:13 │ optimacv.db                  │ INFO  │ Successfully saved job: Concepteur Développeur Full-Stack (Java/DevOps)
+2026-03-27 21:59:13 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:59:14 │ optimacv.db                  │ INFO  │ Successfully saved job: Développeur Full Stack Senior
+2026-03-27 21:59:14 │ optimacv.db                  │ INFO  │ Successfully saved job: Senior AI Data Engineer (Microsoft Fabric & Azure)
+2026-03-27 21:59:14 │ optimacv.linkedin            │ INFO  │ ✅ LinkedIn Jobs: 30 raw jobs for 'DevOps Engineer'.
+2026-03-27 21:59:15 │ optimacv.db                  │ INFO  │ Successfully saved job: Ingénieur DevOps
+2026-03-27 21:59:15 │ optimacv.db                  │ INFO  │ Successfully saved job: Software Engineer
+2026-03-27 21:59:16 │ optimacv.db                  │ INFO  │ Successfully saved job: Cloud DevOps Engineer
+2026-03-27 21:59:16 │ optimacv.indeed              │ INFO  │ ✅ Indeed: 16 raw jobs for 'DevOps Engineer'.
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   LinkedIn Jobs: 30 raw jobs processed.
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   LinkedIn Posts: 0 raw jobs processed.
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Indeed: 16 raw jobs processed.
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │ 
+📊 Total raw jobs scraped & saved: 205
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │ 
+══════════════════════════════════════════════════════════════════════
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │ 📋 PIPELINE RUN SUMMARY
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │ ══════════════════════════════════════════════════════════════════════
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Keywords processed:    5
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Raw LinkedIn Jobs:     181
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Raw LinkedIn Posts:    0
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Raw Indeed:            24
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Total Raw (Inserted):  205
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Insert Operations:     205
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Old Jobs Cleaned:      0
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │   Duration:              348.5s
+2026-03-27 21:59:16 │ optimacv.engine              │ INFO  │ ══════════════════════════════════════════════════════════════════════
+

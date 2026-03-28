@@ -19,11 +19,19 @@ from scrapers.linkedin_posts import LinkedInPostsScraper
 from scrapers.indeed import IndeedScraper
 from filters.gemini_filter import filter_jobs
 
+import os
+
+os.makedirs("logs", exist_ok=True)
+
 # ─── Logging Setup ──────────────────────────────────────────────────────────────
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format="%(asctime)s │ %(name)-28s │ %(levelname)-5s │ %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.FileHandler("logs/scraper.log", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
 )
 logger = logging.getLogger("optimacv.engine")
 
@@ -116,8 +124,9 @@ async def run_pipeline() -> dict:
     logger.info(f"\n📊 Total raw jobs scraped & saved: {stats['total_raw']}")
 
     # ── Cleanup old jobs ─────────────────────────────────────────────────────
-    cleaned = await db.cleanup_old_jobs()
-    stats["cleaned_up"] = cleaned
+    # User requested to keep all historical data:
+    # cleaned = await db.cleanup_old_jobs()
+    stats["cleaned_up"] = 0
 
     # ── Finalize ─────────────────────────────────────────────────────────────
     await db.close()
