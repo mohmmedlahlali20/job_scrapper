@@ -3,3 +3,12 @@ google-genai
 aiomysql
 python-dotenv
 aiohttp
+pywebview
+pywin32
+pillow
+streamlit
+psutil
+pymysql
+plotly
+pandas
+sqlalchemy

@@ -38,10 +38,11 @@ class BaseScraper(ABC):
     """Abstract base scraper with built-in stealth and redirect resolution."""
 
     name: str = "base"
+    _semaphore = asyncio.Semaphore(3)  # Limit concurrency to 3 pages at once
 
-    async def wait_jitter(self) -> None:
+    async def wait_jitter(self, multiplier: float = 1.0) -> None:
         """Human-like delay between requests."""
-        delay = get_random_jitter()
+        delay = get_random_jitter() * multiplier
         action = "🕰️ Long reading pause" if delay > 10 else "⏳ Jitter"
         logger.debug(f"{action}: {delay:.1f}s")
         await asyncio.sleep(delay)
@@ -49,15 +50,16 @@ class BaseScraper(ABC):
     def get_stealth_params(self) -> dict:
         """
         Return StealthyFetcher params with a random screen resolution.
-        Called once per keyword batch for rotation.
         """
         width, height = get_random_resolution()
         return {
             "headless": True,
             "block_images": True,
-            "disable_resources": True,
+            "disable_resources": False, # Keep some to look like a real browser
             "screen_width": width,
             "screen_height": height,
+            "network_idle": True,
+            "timeout": 30000,
         }
 
     @staticmethod

@@ -6,6 +6,7 @@ Uses Scrapy-style Selectors: .css('sel::text').get() and ::attr()
 import asyncio
 import logging
 import re
+import random
 from datetime import date, timedelta
 
 from scrapling.fetchers import AsyncStealthySession
@@ -21,7 +22,7 @@ class IndeedScraper(BaseScraper):
     name = "indeed"
 
     async def scrape(self, keyword: str, on_job_found=None) -> list[RawJob]:
-        """Scrape Indeed Morocco for job listings matching keyword."""
+        """Scrape Indeed Morocco for job listings matching keyword with parallel fetching."""
         jobs: list[RawJob] = []
         stealth = self.get_stealth_params()
 
@@ -31,55 +32,21 @@ class IndeedScraper(BaseScraper):
         )
 
         try:
-            async with AsyncStealthySession(
-                headless=stealth.get("headless", True),
-                block_images=True,
-                disable_resources=False,
-                network_idle=True,
-            ) as session:
+            async with AsyncStealthySession(**stealth) as session:
+                tasks = []
                 for page_idx in range(MAX_PAGES_INDEED):
                     start = page_idx * 10
                     url = build_indeed_search_url(keyword, start)
+                    tasks.append(self._fetch_and_parse_page(session, url, page_idx))
 
-                    try:
-                        page = await session.fetch(url)
-                    except Exception as e:
-                        logger.warning(f"⚠️ Indeed fetch failed (page {page_idx}): {e}")
-                        await self.wait_jitter()
-                        continue
-
-                    try:
-                        raw_html = str(page.body) if hasattr(page, "body") else str(page)
-                    except Exception:
-                        raw_html = str(page)
-
-                    if "captcha" in raw_html.lower() or "cf-challenge" in raw_html.lower():
-                        logger.warning(f"🚫 Cloudflare challenge on page {page_idx}. Stopping.")
-                        break
-
-                    cards = page.css(".job_seen_beacon")
-                    if not cards:
-                        cards = page.css("[data-jk]")
-                    if not cards:
-                        cards = page.css(".resultContent")
-                    if not cards:
-                        logger.info(f"  Page {page_idx}: 0 cards found.")
-                        break
-
-                    page_jobs = 0
-                    for card in cards:
-                        try:
-                            job = self._parse_card(card)
-                            if job:
-                                jobs.append(job)
-                                page_jobs += 1
-                        except Exception as e:
-                            logger.debug(f"  Card parse error: {e}")
-
-                    logger.info(f"  Page {page_idx}: {page_jobs} jobs parsed.")
-
-                    if page_idx < MAX_PAGES_INDEED - 1:
-                        await self.wait_jitter()
+                # Run parallel fetches
+                results = await asyncio.gather(*tasks, return_exceptions=True)
+                
+                for res in results:
+                    if isinstance(res, list):
+                        jobs.extend(res)
+                    elif isinstance(res, Exception):
+                        logger.error(f"❌ Indeed page task failed: {res}")
 
         except Exception as e:
             logger.error(f"💥 Indeed session error: {e}")
@@ -89,12 +56,52 @@ class IndeedScraper(BaseScraper):
             for job in jobs:
                 if job.apply_url and self._is_internal_url(job.apply_url):
                     job.apply_url = await self.resolve_redirect(job.apply_url)
-                    await asyncio.sleep(0.5)
                 if on_job_found:
                     await on_job_found(job)
 
         logger.info(f"✅ Indeed: {len(jobs)} raw jobs for '{keyword}'.")
         return jobs
+
+    async def _fetch_and_parse_page(self, session, url: str, page_idx: int) -> list[RawJob]:
+        """Worker task to fetch and parse a single Indeed page."""
+        async with self._semaphore:
+            # Random delay before starting
+            await asyncio.sleep(random.uniform(2, 6))
+            
+            try:
+                page = await session.fetch(url)
+            except Exception as e:
+                logger.warning(f"⚠️ Indeed fetch failed (page {page_idx}): {e}")
+                return []
+
+            raw_html = page.text if hasattr(page, "text") else str(page)
+
+            if "captcha" in raw_html.lower() or "cf-challenge" in raw_html.lower():
+                logger.warning(f"🚫 Cloudflare challenge on Indeed page {page_idx}.")
+                return []
+
+            # Use Adaptive Tracking for Indeed's dynamic selectors
+            cards = page.css(".job_seen_beacon", adaptive=True)
+            if not cards:
+                cards = page.css("[data-jk]", adaptive=True)
+            if not cards:
+                cards = page.css(".resultContent", adaptive=True)
+
+            if not cards:
+                logger.info(f"  Indeed Page {page_idx}: 0 cards found.")
+                return []
+
+            page_jobs = []
+            for card in cards:
+                try:
+                    job = self._parse_card(card)
+                    if job:
+                        page_jobs.append(job)
+                except Exception as e:
+                    logger.debug(f"  Indeed card parse error: {e}")
+
+            logger.info(f"  Indeed Page {page_idx}: {len(page_jobs)} jobs parsed.")
+            return page_jobs
 
     def _parse_card(self, card) -> RawJob | None:
         """Parse a single Indeed job card using ::text and ::attr() API."""

@@ -71,9 +71,9 @@ async def run_pipeline() -> dict:
 
     # ── Scrape each keyword ──────────────────────────────────────────────────
     for keyword in SEARCH_KEYWORDS:
-        logger.info(f"\n{'─' * 50}")
-        logger.info(f"🔎 Processing keyword: '{keyword}'")
-        logger.info(f"{'─' * 50}")
+        logger.info(f"\n{'━' * 70}")
+        logger.info(f"🔍 PROCESSING KEYWORD: {keyword.upper()}")
+        logger.info(f"{'━' * 70}")
 
         async def handle_job(job: RawJob):
             if not job.apply_url:
@@ -84,7 +84,6 @@ async def run_pipeline() -> dict:
                 'title': job.job_title[:500],
                 'company': job.company_name[:300],
                 'location': job.location[:300],
-                # The user mapped DB column "apply_url" to array key "link" in db.py
                 'link': job.apply_url[:2000], 
                 'source': job.source[:50],
                 'job_hash': job_hash,
@@ -97,6 +96,7 @@ async def run_pipeline() -> dict:
             stats["inserted"] += 1
 
         # Run all 3 scrapers concurrently for each keyword
+        logger.info(f"⏳ Launching parallel scrapers for '{keyword}'...")
         results = await asyncio.gather(
             _safe_scrape(linkedin_scraper, keyword, handle_job),
             _safe_scrape(posts_scraper, keyword, handle_job),

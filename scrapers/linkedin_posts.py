@@ -5,6 +5,7 @@ Uses Scrapy-style Selectors: .css('sel::text').get() and ::attr()
 
 import asyncio
 import logging
+import random
 from datetime import date
 from urllib.parse import quote_plus
 
@@ -27,7 +28,7 @@ class LinkedInPostsScraper(BaseScraper):
     name = "linkedin_posts"
 
     async def scrape(self, keyword: str, on_job_found=None) -> list[RawJob]:
-        """Scrape Google search results for LinkedIn #hiring posts."""
+        """Scrape Google search results for LinkedIn #hiring posts with stealth."""
         jobs: list[RawJob] = []
         stealth = self.get_stealth_params()
 
@@ -37,34 +38,31 @@ class LinkedInPostsScraper(BaseScraper):
         )
 
         try:
-            async with AsyncStealthySession(
-                headless=stealth.get("headless", True),
-                block_images=False,
-                disable_resources=False,
-            ) as session:
+            async with AsyncStealthySession(**stealth) as session:
                 for page_idx in range(MAX_PAGES_LINKEDIN_POSTS):
                     start = page_idx * 10
                     url = _build_google_dork_url(keyword, start)
 
                     try:
-                        page = await session.fetch(url)
+                        # Google is very sensitive, we must be careful
+                        async with self._semaphore:
+                            await self.wait_jitter(multiplier=1.5)
+                            page = await session.fetch(url)
                     except Exception as e:
                         logger.warning(f"⚠️ Google fetch failed (page {page_idx}): {e}")
-                        await self.wait_jitter()
                         continue
 
-                    try:
-                        raw_html = str(page.body) if hasattr(page, "body") else str(page)
-                    except Exception:
-                        raw_html = str(page)
+                    raw_html = page.text if hasattr(page, "text") else str(page)
                     
                     if "captcha" in raw_html.lower() or "unusual traffic" in raw_html.lower():
                         logger.warning("🚫 Google CAPTCHA detected. Stopping.")
                         break
 
-                    results = page.css("div.g")
+                    # Adaptive selectors for Google results
+                    results = page.css("div.g", adaptive=True)
                     if not results:
-                        results = page.css("div.tF2Cxc")
+                        results = page.css("div.tF2Cxc", adaptive=True)
+                    
                     if not results:
                         logger.info(f"  Page {page_idx}: 0 Google results.")
                         break
@@ -81,10 +79,7 @@ class LinkedInPostsScraper(BaseScraper):
                         except Exception as e:
                             logger.debug(f"  Result parse error: {e}")
 
-                    logger.info(f"  Page {page_idx}: {page_jobs} posts extracted from Google.")
-
-                    if page_idx < MAX_PAGES_LINKEDIN_POSTS - 1:
-                        await self.wait_jitter()
+                    logger.info(f"  Page {page_idx}: {page_jobs} posts extracted.")
 
         except Exception as e:
             logger.error(f"💥 LinkedIn Posts (Google) session error: {e}")

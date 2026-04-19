@@ -5,6 +5,7 @@ Uses Scrapy-style Selectors: .css('sel::text').get() and ::attr()
 
 import asyncio
 import logging
+import random
 from datetime import date
 
 from scrapling.fetchers import AsyncStealthySession
@@ -23,7 +24,7 @@ class LinkedInScraper(BaseScraper):
     name = "linkedin"
 
     async def scrape(self, keyword: str, on_job_found=None) -> list[RawJob]:
-        """Scrape LinkedIn guest API for job listings matching keyword."""
+        """Scrape LinkedIn guest API for job listings matching keyword with parallel fetching."""
         jobs: list[RawJob] = []
         stealth = self.get_stealth_params()
 
@@ -33,52 +34,21 @@ class LinkedInScraper(BaseScraper):
         )
 
         try:
-            async with AsyncStealthySession(
-                headless=stealth.get("headless", True),
-                block_images=True,
-                disable_resources=True,
-            ) as session:
+            async with AsyncStealthySession(**stealth) as session:
+                tasks = []
                 for page_idx in range(MAX_PAGES_LINKEDIN):
                     start = page_idx * 25
                     url = build_linkedin_search_url(keyword, start)
+                    tasks.append(self._fetch_and_parse_page(session, url, page_idx))
 
-                    try:
-                        page = await session.fetch(url)
-                    except Exception as e:
-                        logger.warning(f"⚠️ Fetch failed (page {page_idx}): {e}")
-                        await self.wait_jitter()
-                        continue
-
-                    # Debug HTML
-                    try:
-                        raw_html = str(page.body) if hasattr(page, "body") else str(page)
-                    except Exception:
-                        raw_html = str(page)
-
-                    if self.detect_login_wall(raw_html):
-                        logger.warning("🚫 Login wall detected, stopping.")
-                        break
-
-                    # Parse job cards
-                    cards = page.css("li")
-                    if not cards:
-                        logger.info(f"  Page {page_idx}: 0 <li> found.")
-                        break
-
-                    page_jobs = 0
-                    for card in cards:
-                        try:
-                            job = self._parse_card(card)
-                            if job:
-                                jobs.append(job)
-                                page_jobs += 1
-                        except Exception as e:
-                            logger.debug(f"  Card parse error: {e}")
-
-                    logger.info(f"  Page {page_idx}: {page_jobs} jobs parsed.")
-
-                    if page_idx < MAX_PAGES_LINKEDIN - 1:
-                        await self.wait_jitter()
+                # Run parallel fetches with a slight delay between starts to avoid burst
+                results = await asyncio.gather(*tasks, return_exceptions=True)
+                
+                for res in results:
+                    if isinstance(res, list):
+                        jobs.extend(res)
+                    elif isinstance(res, Exception):
+                        logger.error(f"❌ Page task failed: {res}")
 
         except Exception as e:
             logger.error(f"💥 LinkedIn session error: {e}")
@@ -86,15 +56,54 @@ class LinkedInScraper(BaseScraper):
         # Resolve redirects
         if jobs:
             logger.info(f"🔗 Resolving {len(jobs)} apply URLs...")
+            # We can parallelize redirect resolution too, but carefully
+            # For now, let's keep it sequential to avoid overloading target sites
             for job in jobs:
                 if job.apply_url and self._is_internal_url(job.apply_url):
                     job.apply_url = await self.resolve_redirect(job.apply_url)
-                    await asyncio.sleep(0.5)
                 if on_job_found:
                     await on_job_found(job)
 
         logger.info(f"✅ LinkedIn Jobs: {len(jobs)} raw jobs for '{keyword}'.")
         return jobs
+
+    async def _fetch_and_parse_page(self, session, url: str, page_idx: int) -> list[RawJob]:
+        """Worker task to fetch and parse a single page."""
+        async with self._semaphore:
+            # Random delay before starting to avoid simultaneous hits
+            await asyncio.sleep(random.uniform(1, 5))
+            
+            try:
+                page = await session.fetch(url)
+            except Exception as e:
+                logger.warning(f"⚠️ Fetch failed (page {page_idx}): {e}")
+                return []
+
+            raw_html = page.text if hasattr(page, "text") else str(page)
+
+            if self.detect_login_wall(raw_html):
+                logger.warning(f"🚫 Login wall detected on page {page_idx}.")
+                return []
+
+            # Use Adaptive Tracking: auto_save=True first, then adaptive=True
+            # LinkedIn changes classes often, so we try multiple common selectors
+            # scrapling's adaptive mode will help if they change again.
+            cards = page.css("li", adaptive=True) 
+            if not cards:
+                logger.info(f"  Page {page_idx}: 0 items found.")
+                return []
+
+            page_jobs = []
+            for card in cards:
+                try:
+                    job = self._parse_card(card)
+                    if job:
+                        page_jobs.append(job)
+                except Exception as e:
+                    logger.debug(f"  Card parse error: {e}")
+
+            logger.info(f"  Page {page_idx}: {len(page_jobs)} jobs parsed.")
+            return page_jobs
 
     def _parse_card(self, card) -> RawJob | None:
         """Parse a single LinkedIn guest API job card using ::text and ::attr()."""

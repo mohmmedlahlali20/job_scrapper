@@ -25,9 +25,21 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 SEARCH_KEYWORDS = [
     "Python Developer",
     "Fullstack Developer",
+    "MERN Stack Developer",
+    "Frontend Developer",
+    "React Developer",
+    "Node.js Developer",
+    "NestJS Developer",
+    "Express.js Developer",
+    "Django Developer",
+    "Flask Developer",
+    "FastAPI Developer",
     "Backend Engineer",
     "Data Engineer",
     "DevOps Engineer",
+    "Machine Learning Engineer",
+    "Software Architect",
+    "Cloud Engineer"
 ]
 
 LOCATION = "Morocco"
